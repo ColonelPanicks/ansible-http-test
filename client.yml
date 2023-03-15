@@ -1,0 +1,4 @@
+- name: Client setup
+  hosts: localhost
+  roles:
+    - http-client

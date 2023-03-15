@@ -1,0 +1,11 @@
+- name: Wait to ensure server gets setup first
+  pause:
+    seconds: 30
+
+- name: Create SSH dir
+  file:
+    path: /root/.ssh
+    mode: '0700'
+
+- name: Download public key
+  shell: "curl http://{{ gateway }}:81/id_alcescluster.pub >> /root/.ssh/authorized_keys"

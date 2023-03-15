@@ -1,0 +1,4 @@
+- name: Server setup
+  hosts: localhost
+  roles:
+    - http-server
