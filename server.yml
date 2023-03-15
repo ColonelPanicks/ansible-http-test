@@ -1,4 +1,6 @@
 - name: Server setup
   hosts: localhost
+  connection: local
+  become: true
   roles:
     - http-server
